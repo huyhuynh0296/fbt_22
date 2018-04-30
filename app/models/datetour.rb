@@ -1,0 +1,2 @@
+class Datetour < ApplicationRecord
+end

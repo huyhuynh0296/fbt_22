@@ -1,0 +1,181 @@
+<div class="home-slider">
+    <div class="slideshow">
+        <div class="forcefullwidth_wrapper_tp_banner" style="text-align:  center; position: relative;">
+            <div style="text-align: center;font-weight: bold;font-size: 30px;position: absolute; top: 50%;
+            left: 50%; transform: translate(-50%, -50%);">
+                <p>
+                    <%= t ".xinchao" %>
+                </p>
+                <p style="font-size: 19px;font-weight: normal;">
+                    <%= t ".xinchao2" %>
+                </p>
+            </div>
+            <%= link_to image_tag("img.jpg", alt: "home logo", :style => "height: 500px; width: 100%"), "#" %>
+        </div>
+        <div class="search-box-wrapper" style="margin-top: -200px;margin-left: 200px">
+            <div class="search-box container">
+                <div class="search-tab-content">
+                    <div class="tab-pane fade active in" id="tours-tab">
+                        <form role="search" method="get" id="searchform" class="tour-searchform" action="http://dev.gucafe.com/travel/">
+                            <input type="hidden" name="post_type" value="tour">
+                            <div class="row">
+                                <div class="form-group col-sm-4 col-md-2">
+                                    <select id="place_to_selector" name="place_to" class="full-width">
+                                        <option value="">
+                                            <%= t ".diemden" %>
+                                        </option>
+                                        <option class="place-to-item" data-parent="74" value="69">Đà Nẵng</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-sm-4 col-md-2">
+                                    <select name="place_from" class="full-width">
+                                        <option value="">
+                                            <%= t ".khoihanh" %>
+                                        </option>
+                                        <option value="69">Đà Nẵng</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-sm-4 col-md-2">
+                                    <div class="datepicker-wrap from-today">
+                                        <input name="date_from" type="text" class="input-text full-width hasDatepicker" placeholder="Ngày đi" id="dp1524846865059"><img class="ui-datepicker-trigger" src="index.html//dev.gucafe.com/travel/wp-content/themes/Travelo/images/icon/blank.png" alt="" title="">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-1 col-md-2">
+                                    <div class="">
+                                        <select name="max_price" class="full-width">
+                                            <option value="">
+                                                <%= t ".gia" %>
+                                            </option>
+                                            <option value="1000000">Dưới 1 triệu</option>
+                                            <option value="3000000">Dưới 3 triệu</option>
+                                            <option value="5000000">Dưới 5 triệu</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-6 col-md-2 col-xs-6">
+                                    <button type="submit" class="full-width icon-check" data-animation-type="bounce" data-animation-duration="1">
+                                        <%= t ".tim" %>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear" style="margin:  200px;"></div>
+<section id="content" style="margin-top: -200px;">
+    <div class="entry-content">
+        <div class="container">
+            <div class="section destinations">
+                <h2 class="section-title" style="text-align: center; margin-bottom: -20px;"><%=  %></h2>
+                <div class="line" style="border-bottom: solid red;width: 40px; margin-left: 48%;border-width: 0.5px; margin-bottom: 20px; "></div>
+                <div class="tour-packages row add-clearfix image-box listing-style2">
+                    <div class="col-sm-6 col-sms-6 col-md-3">
+                        <article class="box" style="height: auto; min-height: 360px;">
+                            <figure>
+                                <a href="#">
+                                    <%= image_tag("hoian.jpg", alt: "tour da nang", :style => "height: 300px; width: 500px") %>
+                                </a>
+                            </figure>
+                            <div class="details">
+                                <span class="price" style="color: #DA251C; line-height: 1em;">500.000 đ</span>
+                                <h4 class="box-title"><a href="http://dev.gucafe.com/travel/tour/da-nang-ba-na-hoi-son-tra-cu-lao-cham-2/" style="text-decoration: none; color: #2d3e52;">Trung Đà Nẵng – Bà Nà – Hội An – Sơn Trà – Cù Lao Chàm</a></h4>
+                                <hr>
+                                <div class="text-center">
+                                    <div class="action">
+                                        <a title="View Detail" class="button btn-small full-width" href="#" style="background-color: red;text-decoration: none;">
+                                            <%= t ".book" %>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <style type="text/css">
+                        .img-tour {
+                            width: 500px;
+                            height: 300px;
+                        }
+
+                        .box-title {
+                            line-height: 1.4em;
+                            font-size: 16px;
+                            font-family: "Roboto", Arial;
+                        }
+
+                        .price {
+                            color: #DA251C;
+                            line-height: 1em;
+                        }
+
+                        h2.section-title {
+                            padding-bottom: 30px;
+                            text-align: center;
+                            display: block;
+                            font-family: "Hel_Med", arial;
+                            font-size: 24px;
+                            position: relative;
+                            color: #1a1a1a;
+                            text-transform: uppercase;
+                            font-weight: bold;
+                        }
+                    </style>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<style type="text/css">
+    a {
+        text-decoration: none;
+    }
+</style>
+<div style="position: relative;">
+    <%= image_tag("vietnam.jpg", alt: "viet nam", :style => "height: 300px; width: 100%") %>
+        <div class="parallax global-map-area" data-stellar-background-ratio="0.5" style="position: absolute; top: 30px;">
+            <style type="text/css">
+                .box-title {
+                    color: white;
+                    font-family: "Roboto", Arial;
+                }
+            </style>
+            <div class="wpb_column col-sm-4">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper">
+                        <div class="icon-box style4">
+                            <%= image_tag("pp.png", alt: "viet nam", :class => "soap-icon-adventure white-color") %>
+                                <h3 class="box-title"><%= t ".mkt1" %></h3>
+                                <p class="description">Lorem Ipsum simply dummy text industry&nbsp;lorem Ipsum simply dummy text industry.</p>
+                                <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wpb_column col-sm-4">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper">
+                        <div class="icon-box style4">
+                            <%= image_tag("pp.png", alt: "viet nam", :class => "soap-icon-adventure white-color") %>
+                                <h3 class="box-title"><%= t ".mkt2" %></h3>
+                                <p class="description">Lorem Ipsum simply dummy text industry. Lorem Ipsum simply dummy text industry.</p>
+                                <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wpb_column col-sm-4">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper">
+                        <div class="icon-box style4">
+                            <%= image_tag("pp.png", alt: "viet nam", :class => "soap-icon-adventure white-color") %>
+                                <h3 class="box-title"><%= t ".mkt3" %></h3>
+                                <p class="description">Lorem Ipsum simply dummy text industry.&nbsp;Lorem Ipsum simply dummy text industry.</p>
+                                <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

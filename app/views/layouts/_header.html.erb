@@ -1,0 +1,89 @@
+<header id="header" class="navbar-static-top">
+   <style type="text/css">
+      img.wp-smiley,
+      img.emoji {
+      display: inline !important;
+      border: none !important;
+      box-shadow: none !important;
+      height: 1em !important;
+      width: 1em !important;
+      margin: 0 .07em !important;
+      vertical-align: -0.1em !important;
+      background: none !important;
+      padding: 0 !important;
+      }
+   </style>
+   <style id="rs-plugin-settings-inline-css" type="text/css">
+      #rs-demo-id {}
+      .tp-caption.description,.description{color:#ffffff;font-size:18px;line-height:22px;font-weight:400;font-style:normal;font-family:Roboto;text-decoration:none;background-color:transparent;border-color:transparent;border-style:none;border-width:0px 0px 0px 0px;border-radius:0px 0px 0px 0px}   #rev_slider_1_1_wrapper .tp-loader.spinner4 div { background-color: #FFFFFF !important; }
+   </style>
+   <style id="trav_style_custom-inline-css" type="text/css">
+      #header .logo a, #footer .bottom .logo a, .chaser .logo a, .logo-modal {
+      background-image: url(http://dev.gucafe.com/travel/wp-content/uploads/2017/08/logo-2.png);
+      background-repeat: no-repeat;
+      display: block;
+      }
+      .chaser .logo a {
+      background-size: auto 20px;
+      }#page-wrapper #footer .logo img { height: 45px; }#page-wrapper #footer .logo a { background-size: auto 45px; }
+   </style>
+   <div class="topnav hidden-xs">
+      <div class="container" >
+         <ul class="quick-menu pull-left">
+            <li id="menu-item-1884" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1884"><a href="tel:0976902979"><%= t ".lienhe"  %></a></li>
+            <li id="menu-item-1885" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1885"><a href="mailto:hello@hosana.com"><%= t ".email" %></a></li>
+         </ul>
+      </div>
+   </div>
+   <div id="main-header">
+      <div class="main-header">
+         <div class="container" style="position: relative;">
+            <div class="logo navbar-brand" style="
+                position: absolute;
+                left:  -46px;
+                bottom:  12px;">
+               <%= link_to image_tag("logo.png", alt: "home logo"), "#" %>
+            </div>
+            <div class="header-menu-wrap" style="
+                         padding-right: 81px;
+                         width:  1124px;">
+               <style type="text/css">
+                  nav #main-menu .ul .li a {
+                     text-decoration: none;
+                  }
+               </style>
+               <nav id="main-menu" class="menu-main-menu-container">
+                  <ul id="menu-main-menu" class="menu">
+                     <li id="menu-item-1674" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-785 current_page_item menu-item-1674"><%= link_to t(".trangchu"), "#" %></li>
+                     <li id="menu-item-1899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1899"><%= link_to t(".gioithieu"), "#" %></li>
+                     <li id="menu-item-1989" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1989 megamenu-menu">
+                        <%= link_to t(".tour"), "#" %>
+                        <div class="megamenu-wrapper light container" style="left: -404.25px; width: 1170px; display: block;">
+                           <ul class="sub-menu megamenu">
+                              <li id="menu-item-1990" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1990 megamenu-columns-1" style="width: 50%;">
+                                  <%= link_to t(".tourtrongnuoc"), "#" %>
+                                 <ul class="sub-menu ">
+                                    <li id="menu-item-1992" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1992">
+                                    <%= link_to t(".tourdanang"), "#", :class => "none" %></li>
+                                 </ul>
+                              </li>
+                              <li id="menu-item-1991" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1991 megamenu-columns-1" style="width: 50%;">
+                                 <%= link_to t(".tournuocngoai"), "#", :class => "none" %>
+                                 <ul class="sub-menu ">
+                                    <li id="menu-item-1995" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1995"><%= link_to t(".tourthailan"), "#", :class => "none" %></li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li id="menu-item-1820" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1820"><%= link_to t(".lienhe-menu"), "#", :class => "none" %></li>
+                  </ul>
+               </nav>
+               <div class="clearfix"></div>
+            </div>
+         </div>
+         <!-- .container -->
+      </div>
+      <!-- .main-header -->
+   </div>
+</header>

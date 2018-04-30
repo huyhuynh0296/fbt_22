@@ -11,4 +11,17 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_self
+ *= require animate
+ *= require application
+ *= require bootstrap-css
+ *= require custom
+ *= require flexslider
+ *= require font-awesome
+ *= require jquery.bxslider
+ *= require js_composer.min
+ *= require responsive
+ *= require settings
+ *= require style-red
+ *= require styles
+ *= require other
  */

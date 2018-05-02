@@ -33,18 +33,10 @@ body {
 }
 </style>
 <div id="navbar">
-    <a href="#">
-        <%= t "layouts.header.lienhe-menu" %>
-    </a>
-    <a href="#">
-        <%= t "layouts.header.tour" %>
-    </a>
-    <a href="#">
-        <%= t "layouts.header.gioithieu" %>
-    </a>
-    <a href="#" style="color: red; font-weight: bold;">
-        <%= t "layouts.header.trangchu" %>
-    </a>
+    <%= link_to t("layouts.header.lienhe-menu"), lienhe_path %>
+    <%= link_to t("layouts.header.tour"), tour_path %>
+    <%= link_to t("layouts.header.gioithieu"), gioithieu_path %>
+    <%= link_to t("layouts.header.trangchu"), root_path %>
 </div>
 
 <script>

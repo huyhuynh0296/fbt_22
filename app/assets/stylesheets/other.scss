@@ -1,0 +1,90 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+img.wp-smiley,img.emoji {
+  display: inline !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: 1em !important;
+  width: 1em !important;
+  margin: 0 .07em !important;
+  vertical-align: -0.1em !important;
+  background: none !important;
+  padding: 0 !important;
+}
+#rs-demo-id {}
+  .tp-caption.description,.description{color:#ffffff;font-size:18px;line-height:22px;font-weight:400;font-style:normal;font-family:Roboto;text-decoration:none;background-color:transparent;border-color:transparent;border-style:none;border-width:0px 0px 0px 0px;border-radius:0px 0px 0px 0px}   #rev_slider_1_1_wrapper .tp-loader.spinner4 div { background-color: #FFFFFF !important; }
+#header .logo a, #footer .bottom .logo a, .chaser .logo a, .logo-modal {
+  background-image: url(http://dev.gucafe.com/travel/wp-content/uploads/2017/08/logo-2.png);
+  background-repeat: no-repeat;
+  display: block;
+}
+.chaser .logo a {
+  background-size: auto 20px;
+}
+#page-wrapper #footer .logo img { height: 45px; }#page-wrapper #footer .logo a { background-size: auto 45px; }
+
+#home page
+.img-tour {
+width: 500px;
+height: 300px;
+}
+ .box-title {
+ line-height: 1.4em;
+ font-size: 16px;
+ font-family: "Roboto", Arial;
+}
+ .price {
+ color: #DA251C;
+ line-height: 1em;
+}
+ h2.section-title {
+  padding-bottom: 30px;
+  text-align: center;
+  display: block;
+  font-family: "Hel_Med", arial;
+  font-size: 24px;
+  position: relative;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.box-title {
+  color: white;
+  font-family: "Roboto", Arial;
+}
+#hiden
+body {
+  margin: 0;
+  background-color: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar {
+  z-index: 100;
+  background-color: #333;
+  position: fixed;
+  top: -50px;
+  width: 100%;
+  display:block;
+  transition: top 0.3s;
+  background: rgba(255, 255, 255, 0.95);
+  padding-right: 100px;
+}
+
+#navbar a {
+  float: right;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+

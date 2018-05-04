@@ -45,3 +45,7 @@ bower.json
 
 config/database.yml
 app/assets/images
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+test/fixtures/*.yml

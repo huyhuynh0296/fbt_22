@@ -1,6 +1,6 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
-
+@import 'variables';
 .bx-wrapper .bx-viewport {
   -moz-box-shadow: 0 0 5px #ccc;
   -webkit-box-shadow: 0 0 5px #ccc;
@@ -25,7 +25,6 @@
 }
 
 /* LOADER */
-
 .bx-wrapper .bx-loading {
   min-height: 50px;
   background: url(images/bx_loader.gif) center center no-repeat #fff;
@@ -38,13 +37,12 @@
 }
 
 /* PAGER */
-
 .bx-wrapper .bx-pager {
   text-align: center;
   font-size: .85em;
   font-family: Arial;
   font-weight: bold;
-  color: #666;
+  color: $color6;
   padding-top: 20px;
 }
 
@@ -109,7 +107,6 @@
 }
 
 /* AUTO CONTROLS (START / STOP) */
-
 .bx-wrapper .bx-controls-auto {
   text-align: center;
 }
@@ -157,7 +154,6 @@
 }
 
 /* IMAGE CAPTIONS */
-
 .bx-wrapper .bx-caption {
   position: absolute;
   bottom: 0;
@@ -168,7 +164,7 @@
 }
 
 .bx-wrapper .bx-caption span {
-  color: #fff;
+  color: $color3f;
   font-family: Arial;
   display: block;
   font-size: .85em;

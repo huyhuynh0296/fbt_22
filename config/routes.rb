@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
   root "static_pages#home"
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get "/gioithieu", to: "static_pages#gioithieu"
+  get "/login", to: "sessions#new"
+  post "/login", to: "sessions#create"
+  get "/signup", to: "users#new"
 end

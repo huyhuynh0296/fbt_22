@@ -1,63 +1,8 @@
 <footer id="footer" class="style5">
-   <div class="footer-wrapper" style="height: 450px;">
-      <div class="container">
-         <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-3 footer-col">
-               <div id="text-4" class="small-box widget_text">
-                  <h2 class="widgettitle"><%= t ".tencty" %></h2>
-                  <div class="textwidget">
-                     <p><strong><%= t ".truso" %></strong> <%= t ".tentruso" %><br>
-                        <%= t ".hotline" %><br>
-                        <%= t ".email" %><br>
-                     </p>
-                  </div>
-               </div>
-               <div id="social_links-widget-2" class="small-box social_links">
-                  <h2 class="widgettitle"><%= t ".ketnoi" %></h2>
-                  <ul>
-                     <li><%= link_to image_tag("fb.png", alt: "facebook"), "#", :class => "li-img" %></li>
-                     <li><%= link_to image_tag("gg.png", alt: "googleplus"), "#", :class => "li-img"%></li>
-                     <style type="text/css">
-                       .li-img {
-                        float: left; width: 30px;
-                       }
-                     </style>
-                  </ul>
-               </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 footer-col">
-               <h2 class="widgettitle">TRONG NƯỚC</h2>
-               <div class="widget_nav_menu">
-                  <ul>
-                     <li><a href="#">Đà Nẵng</a></li>
-                  </ul>
-               </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 footer-col">
-               <h2 class="widgettitle"><%= t ".nuocngoai" %></h2>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 footer-col">
-               <div id="nav_menu-4" class="small-box widget_nav_menu">
-                  <h2 class="widgettitle"><%= t ".thongtin" %></h2>
-                  <div class="menu-footer-4-container">
-                     <ul id="menu-footer-4" class="menu">
-                        <li id="menu-item-2003" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2003"><a href="http://dev.gucafe.com/travel/gioi-thieu/"><%= t "layouts.header.gioithieu" %></a></li>
-                        <li id="menu-item-2004" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2004"><a href="http://dev.gucafe.com/travel/standard-pages/lien-/"><%= t "layouts.header.lienhe-menu" %></a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
    <div class="bottom gray-area">
-      <div class="container">
-         <div class="logo" style="padding-left: 450px;">
-            <%= link_to image_tag("logo.png", alt: "home logo"), "#" %>
-         </div>
-         <p class="copyright-text" style="text-align: center;">
-            <%= t ".banquyen" %>
-         </p>
+      <div class="container" style="text-align:  center;border-bottom: solid red 2px;margin-bottom:  50px;">
+         <%= t ".banquyen" %>
       </div>
    </div>
 </footer>
+<%= render "layouts/hiden" %>

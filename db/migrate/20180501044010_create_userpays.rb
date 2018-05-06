@@ -4,7 +4,6 @@ class CreateUserpays < ActiveRecord::Migration[5.1]
       t.integer :user_id
       t.string :bankname
       t.string :acountnumber
-      t.integer :tour_id
 
       t.timestamps
     end

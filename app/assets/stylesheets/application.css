@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+<<<<<<< HEAD
  *= require animate
  *= require custom
  *= require flexslider
@@ -21,4 +22,9 @@
  *= require styles
  *= require other
  *= require admin
+=======
+ *= require other
+ *= require admin
+ *= require css-admin
+>>>>>>> a5f22ce... signup-login-logout
  */

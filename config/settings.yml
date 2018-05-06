@@ -4,3 +4,8 @@ user:
   minimum_password: 6
 category:
   maximum_name: 30
+  role_default: 0
+category:
+  maximum_name: 30
+session:
+  remember: "1"

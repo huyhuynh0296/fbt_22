@@ -15,8 +15,8 @@ en:
     header:
       lienhe: "Liên hệ: 0123.456789"
       email: "Email: huypoo0296@gmail.com"
-      gioithieu: "Giới thiệu"
-      trangchu: "Trang chủ"
+      gioithieu: "About Me"
+      trangchu: "Home"
       tour: "Tours"
       tourtrongnuoc: "Tour trong nước"
       tourdanang: "Tour Đà Nẵng"
@@ -24,7 +24,7 @@ en:
       tourhochiminh: "Tour Hồ Chí Minh"
       tournuocngoai: "Tour nước ngoài"
       tourthailan: "Tour Thái Lan"
-      lienhe-menu: "Liên hệ"
+      lienhe-menu: "Contact"
   sessions:
     new:
       pass: "Password"
@@ -34,7 +34,11 @@ en:
       email: "Email Address"
       title: "Log in"
       link_signup: "Sign up now!"
+    flash:
+      error: "Invalid email or password"
   users:
+    flash:
+      errorshow: "Can't find user"
     error: "Error!"
     new:
       title: "Sign Up"
@@ -46,6 +50,12 @@ en:
       not_login: "Not Login"
       index:
         title: "Users"
+      email: "Your Email Address"
+      name: "Your Name"
+      password: "Enter The Password"
+      password_confirmation: "Confrim The Password!"
+      remember: "Remember me on this computer"
+      create: "Create"
   static_pages:
     home:
       xinchao: "XIN CHÀO"
@@ -58,3 +68,6 @@ en:
       mkt1: "Tour chọn lọc chất lượng nhất"
       mkt2: "Bảo đảm giá tốt nhất"
       mkt3: "Đội ngũ tư vấn chi tiết và tận tình"
+  pages:
+    home:
+      title: "Home"

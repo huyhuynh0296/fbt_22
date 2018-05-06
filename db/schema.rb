@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180504071132) do
+ActiveRecord::Schema.define(version: 20180501055050) do
 
   create_table "bookingtours", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "user_id"
@@ -25,14 +25,6 @@ ActiveRecord::Schema.define(version: 20180504071132) do
     t.bigint "users_id"
     t.index ["tours_id"], name: "index_bookingtours_on_tours_id"
     t.index ["users_id"], name: "index_bookingtours_on_users_id"
-  end
-
-  create_table "books", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "name"
-    t.bigint "store_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["store_id"], name: "index_books_on_store_id"
   end
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -94,13 +86,6 @@ ActiveRecord::Schema.define(version: 20180504071132) do
     t.index ["users_id"], name: "index_ratings_on_users_id"
   end
 
-  create_table "stores", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "name"
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "tours", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.string "image"
@@ -128,13 +113,12 @@ ActiveRecord::Schema.define(version: 20180504071132) do
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "username"
+    t.string "name"
     t.string "email"
-    t.string "password"
-    t.string "address"
-    t.string "numberphone"
-    t.integer "role"
-    t.string "images"
+    t.string "password_digest"
+    t.integer "role", default: 0
+    t.string "avatar"
+    t.string "remember_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

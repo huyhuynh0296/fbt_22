@@ -1,0 +1,62 @@
+<% provide :title, @user.name %>
+<div class="row">
+  <aside class="col-md-4">
+    <div id = "user-info">
+    </div>
+
+
+
+      <%= button_tag type: "button", class: "btn btn-primary",
+        data: {toggle: "modal", target: "#buy-coin"} do %>
+        <span class="glyphicon glyphicon-plus"></span><%= t(".buy_coin") %>
+
+
+      <div class="modal fade" id="buy-coin" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <%= button_tag type: "button", class: "close", data: {dismiss: "modal"} do %>
+                &times;
+
+              <h4 class="modal-title"><%= t ".buy_coin" %></h4>
+            </div>
+
+            <div class="modal-body">
+              <div class="modal-body">
+
+                <%= collection_select :coin_value, "select", @coin_values, :cost_per_coin,
+                  :type_buy, {prompt: true}, {class: "form-control", id: "select"} %>
+
+                <%= label_tag "label", t(".label_cost") %> <b id = "cost-per-coin"></b>
+
+                <%= number_field_tag "input-coin", Settings.user.default_buy,
+                  class: "form-control coin-want-buy", placeholder: t(".placeholer_coin") %>
+
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <%= button_tag type: "button",
+                class: "btn btn-primary center-block btn-buy-coin" do %>
+                <%= t ".submit" %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </aside>
+
+  <div class="col-md-8" id="document">
+    <h3></h3>
+
+      <ol class="documents">
+
+      </ol>
+
+
+      <p class="text-danger"><%= t ".not_have_doc" %></p>
+
+  </div>
+</div>

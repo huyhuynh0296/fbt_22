@@ -6,7 +6,16 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+<<<<<<< HEAD
 /* universal */
+=======
+
+/* universal */
+body {
+  padding-top: 60px;
+}
+
+>>>>>>> a5f22ce... signup-login-logout
 section {
   overflow: auto;
 }

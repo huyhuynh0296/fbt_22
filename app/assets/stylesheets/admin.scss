@@ -6,7 +6,13 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 /* universal */
+body {
+  padding-top: 60px;
+}
+
+>>>>>>> a5f22cef685deecd9c47e5b7d8c1680622cbcd3d
 section {
   overflow: auto;
 }

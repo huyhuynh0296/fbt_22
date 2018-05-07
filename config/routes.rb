@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   get "/signup", to: "users#new"
   post "/signup", to: "users#create"
   resources :users
+  namespace :admin do
+    resources :categories, only: %i(index destroy update)
+  end
 end

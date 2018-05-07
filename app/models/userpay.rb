@@ -1,4 +1,5 @@
 class Userpay < ApplicationRecord
-  has_may :user, dependent: :destroy
-  has_may :bookingtour, dependent: :destroy
+  belongs_to :user
+
+  has_many :bookingtours, dependent: :destroy
 end

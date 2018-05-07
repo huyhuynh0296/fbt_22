@@ -1,5 +1,9 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
+  has_many :bookingtours, dependent: :destroy
+  has_many :ratings, dependent: :destroy
+  has_many :comments, dependent: :destroy
+
   before_save{self.email = email.downcase}
   validates :name, presence: true, length: {maximum: Settings.user.maximum_name}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i

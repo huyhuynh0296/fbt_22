@@ -1,4 +1,4 @@
 class Comment < ApplicationRecord
-  has_many :tour, dependent: :destroy
-  has_many :user, dependent: :destroy
+  belongs_to :user
+  has_many :tours, dependent: :destroy
 end

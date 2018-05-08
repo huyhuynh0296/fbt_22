@@ -1,3 +1,3 @@
 class Datetour < ApplicationRecord
-  belongs_to :bookingtours
+  belongs_to :tour
 end

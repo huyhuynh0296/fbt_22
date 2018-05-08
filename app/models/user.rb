@@ -1,5 +1,9 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
+
+  has_many :places, dependent: :destroy
+  has_many :categories, dependent: :destroy
+  has_many :tours, dependent: :destroy
   has_many :bookingtours, dependent: :destroy
   has_many :ratings, dependent: :destroy
   has_many :comments, dependent: :destroy

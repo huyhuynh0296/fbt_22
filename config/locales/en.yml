@@ -81,3 +81,26 @@ en:
         nbtour: "Number Tours"
         cm: "Command"
         category_fail: "Login Now!"
+  tours:
+    tour:
+      p_price: " đ/slot"
+    show:
+      fail: "error!"
+      home: "Home"
+      start: "Start"
+      date_other: "Other Day"
+      time: "Time"
+      slot: "Slot"
+      service: "SERIVCE"
+      guide: "guide"
+      transport: "Transport"
+      sticks: "Sightseeing tickets"
+      detail: "Details Tour"
+    form:
+      from: "From: "
+      categories: "Categories: "
+      date: "Date: "
+      price: "Price: "
+    index:
+      showtour: "Show Tours: "
+      search: "Search Tour"

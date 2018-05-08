@@ -1,0 +1,97 @@
+<% provide :title, @tour.name %>
+<section id="content">
+   <div class="container tour-detail-page">
+      <div class="tour-intro-section">
+         <div class="row">
+            <div class="col-md-7">
+               <div class="image-box">
+                  <div class="flexslider photo-gallery style1" id="post-slideshow1" data-sync="#post-carousel1">
+                     <div class="flex-viewport" style="overflow: hidden; position: relative;"></div>
+                     <%= image_tag(@tour.image, alt: @tour.name, :style => "height: 100%; width: 100%") %>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-5 tour-info-right">
+               <div class="tour-info-right-content">
+                  <h1 class="tour-title"><%= @tour.name %></h1>
+                  <div class="info-frame">
+                     <div class="tour-price">
+                        <span itemprop="price"></span>
+                     </div>
+            <%= link_to "Booking", "#", :class => "btn btn-success" %>
+                  </div>
+                  <div class="info-frame">
+                     <div class="row">
+                        <div class="col-md-8">
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-4"><%= t ".start" %></div>
+                        <div class="col-md-8">
+                           <div class="row">
+                              <div class="col-md-6">
+                              </div>
+                              <div class="col-md-6">
+                                 <%= link_to t ".date_other" %>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-4"><%= t ".start" %></div>
+                        <div class="col-md-8"><%= @place.name %></div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-4"><%= t ".time" %></div>
+                        <div class="col-md-8"><%= @tour.clock %></div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-4"><%= t ".slot" %></div>
+                        <div class="col-md-8"><%= @tour.slot %></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="tour-detail-section">
+         <div class="row" style="margin-top: 20px;">
+            <div id="main" class="col-sm-8 col-md-8" style="border: solid green 1px; border-radius: 3px;">
+               <div class="post-1824 tour type-tour status-publish has-post-thumbnail hentry location-da-nang tour_type-tour-trong-nuoc">
+                  <div id="tour-details" class="travelo-box" style="margin-top: 30px;">
+                     <div class="tab-container">
+                        <strong style="padding: 15px 15px;background-color: red;color: white;"><%= t ".detail" %>
+                        </strong>
+                        <div class="tab-content">
+                           <div id="tour-description" class="tab-pane fade in active">
+                              <%= @tour.description %>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-4 col-md-4">
+               <div class="amenity-widget widget" style="
+                  margin-left: 165px;
+                  ">
+                  <h3 class="widget-title"><%= t ".service" %></h3>
+                  <div class="widget-content">
+                     <ul>
+                        <div class="mg-bot10">
+                           <span style="margin-left: 10px"><%= t ".guide" %></span>
+                        </div>
+                        <div class="mg-bot10">
+                           <span style="margin-left: 10px"><%= t ".transport" %></span>
+                        </div>
+                        <div class="mg-bot10">
+                           <span style="margin-left: 10px"><%= t ".sticks" %></span>
+                        </div>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

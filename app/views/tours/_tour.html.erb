@@ -1,0 +1,21 @@
+<article class="box">
+   <figure class="col-sm-5 col-md-4">
+      <%= link_to image_tag( "img.jpg", alt: tour.name, class: "attachment-gallery-thumb size-gallery-thumb wp-post-image"), tour, :class => "hover-effect" %>
+   </figure>
+   <div class="details col-sm-7 col-md-8">
+      <div>
+         <div>
+            <h4 class="box-title">
+               <%= link_to tour.name, tour %>
+               <small><%= tour.clock %></small>
+            </h4>
+         </div>
+         <div>
+            <span class="price"><%= tour.price %><%= t ".p_price" %></span>
+         </div>
+      </div>
+      <div>
+         <%= tour.description %>
+      </div>
+   </div>
+</article>

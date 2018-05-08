@@ -1,4 +1,6 @@
 class Category < ApplicationRecord
+  belongs_to :user
+
   has_many :tours, dependent: :destroy
 
   before_save :downcase_name

@@ -1,3 +1,5 @@
 class Place < ApplicationRecord
-  belong_to :tour
+  belongs_to :user
+
+  has_many :tours, dependent: :destroy
 end

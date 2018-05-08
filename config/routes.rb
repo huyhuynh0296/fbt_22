@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :categories, only: %i(index destroy update)
   end
+  resources :tours, only: %i(index show)
 end

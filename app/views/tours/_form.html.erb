@@ -1,0 +1,18 @@
+<%= form_tag do %>
+
+  <%= t ".from" %>
+  <%= collection_select :place, :name, @places, :id, :name,
+    {prompt: true}, {class: "form-control category-search", id: "place"} %>
+
+  <%= t ".categories" %>
+  <%= collection_select :category, :name, @categories, :id, :name,
+    {prompt: true}, {class: "form-control category-search", id: "category"} %>
+
+  <%= t ".date" %>
+  <%= text_field_tag :date %>
+
+  <%= t ".price" %>
+  <%= text_field_tag :date %>
+
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>

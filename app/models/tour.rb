@@ -1,7 +1,7 @@
 class Tour < ApplicationRecord
-  belong_to :rating
-  belong_to :comment
+  belongs_to :category
 
-  has_many :category, dependent: :destroy
-  has_many :image, dependent: :destroy
+  has_many :ratings, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :images, dependent: :destroy
 end

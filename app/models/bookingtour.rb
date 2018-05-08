@@ -1,7 +1,7 @@
 class Bookingtour < ApplicationRecord
-  belong_to :datetour
-  belong_to :userpay
+  belongs_to :user
+  belongs_to :userpay
+  belongs_to :tour
 
-  has_many :user, dependent: :destroy
-  has_many :tour, dependent: :destroy
+  has_many :datetours, dependent: :destroy
 end

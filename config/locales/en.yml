@@ -71,3 +71,13 @@ en:
   pages:
     home:
       title: "Home"
+  admin:
+    categories:
+      table_category:
+        title: "Categories"
+        nameC: "Name Category"
+        time: "Time"
+        own: "Own"
+        nbtour: "Number Tours"
+        cm: "Command"
+        category_fail: "Login Now!"

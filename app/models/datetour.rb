@@ -1,3 +1,3 @@
 class Datetour < ApplicationRecord
-  has_many :bookingtour, dependent: :destroy
+  belongs_to :bookingtours
 end

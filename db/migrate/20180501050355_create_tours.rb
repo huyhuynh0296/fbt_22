@@ -5,9 +5,9 @@ class CreateTours < ActiveRecord::Migration[5.1]
       t.string :image
       t.text :description
       t.integer :price
-      t.integer :category_id
-      t.integer :place_id
-      t.integer :image_id
+      t.references :place
+      t.references :image
+      t.references :category
 
       t.timestamps
     end

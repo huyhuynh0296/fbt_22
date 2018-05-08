@@ -30,8 +30,10 @@ ActiveRecord::Schema.define(version: 20180501055050) do
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.text "description"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_categories_on_user_id"
   end
 
   create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -63,8 +65,6 @@ ActiveRecord::Schema.define(version: 20180501055050) do
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "tours_id"
-    t.index ["tours_id"], name: "index_images_on_tours_id"
   end
 
   create_table "places", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -91,15 +91,14 @@ ActiveRecord::Schema.define(version: 20180501055050) do
     t.string "image"
     t.text "description"
     t.integer "price"
-    t.integer "category_id"
-    t.integer "place_id"
-    t.integer "image_id"
+    t.bigint "place_id"
+    t.bigint "image_id"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "categories_id"
-    t.bigint "places_id"
-    t.index ["categories_id"], name: "index_tours_on_categories_id"
-    t.index ["places_id"], name: "index_tours_on_places_id"
+    t.index ["category_id"], name: "index_tours_on_category_id"
+    t.index ["image_id"], name: "index_tours_on_image_id"
+    t.index ["place_id"], name: "index_tours_on_place_id"
   end
 
   create_table "userpays", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -128,10 +127,7 @@ ActiveRecord::Schema.define(version: 20180501055050) do
   add_foreign_key "comments", "tours", column: "tours_id"
   add_foreign_key "comments", "users", column: "users_id"
   add_foreign_key "datetours", "bookingtours", column: "bookingtours_id"
-  add_foreign_key "images", "tours", column: "tours_id"
   add_foreign_key "ratings", "tours", column: "tours_id"
   add_foreign_key "ratings", "users", column: "users_id"
-  add_foreign_key "tours", "categories", column: "categories_id"
-  add_foreign_key "tours", "places", column: "places_id"
   add_foreign_key "userpays", "users", column: "users_id"
 end

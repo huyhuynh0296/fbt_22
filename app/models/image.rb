@@ -1,3 +1,3 @@
 class Image < ApplicationRecord
-  has_many :tour, dependent: :destroy
+  belongs_to :tour
 end

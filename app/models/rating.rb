@@ -1,4 +1,4 @@
 class Rating < ApplicationRecord
-  has_many :user, dependent: :destroy
-  has_many :tour, dependent: :destroy
+  has_many :users, dependent: :destroy
+  has_many :tours, dependent: :destroy
 end

@@ -1,0 +1,19 @@
+                  <div class="col-sm-6 col-sms-6 col-md-3" >
+                        <article class="box" style="margin-bottom: 20px; min-height: 350px;">
+                            <figure>
+
+                                    <%= link_to image_tag(limit_tours.image, alt: limit_tours.name, :style => "height: 300px; width: 500px"), limit_tours, :class => "hover-effect" %>
+
+                            </figure>
+                            <div class="details" style="padding-bottom: 0px; height: 95px;">
+                                <span class="price" style="color: #DA251C; line-height: 1em;"><%= limit_tours.price %> đ</span>
+                                <h4 class="box-title" style="font-size: 15px;"><a href="http://dev.gucafe.com/travel/tour/da-nang-ba-na-hoi-son-tra-cu-lao-cham-2/" style="text-decoration: none; color: #2d3e52;"><%= limit_tours.name %></a></h4>
+                                <hr style="margin-top: 10px">
+                                <div class="text-center" style="margin-top: -9%;">
+                                    <div class="action">
+                                        <%= link_to t(".book"), limit_tours, {class: "button btn-small full-width", :style => "background-color: red;text-decoration: none;"} %>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>

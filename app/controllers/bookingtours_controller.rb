@@ -29,10 +29,10 @@ class BookingtoursController < ApplicationController
   end
 
   def show
-    if admin? current_user
+    if admin?
       @bookingtour = Bookingtour.all
       @tour_finished = Bookingtour.search_booked_finished 3
-    elsif users? current_user
+    elsif is_user?
       @bookingtour = Bookingtour.search_by_user current_user.id
     end
   end
@@ -74,10 +74,10 @@ class BookingtoursController < ApplicationController
   end
 
   def find_to_edit
-    if admin?(current_user) || manage?(current_user)
+    if admin? || manage?
       @bookingtour = Bookingtour.all
       @tour_finished = Bookingtour.search_booked_finished 3
-    elsif users? current_user
+    elsif is_user?
       @bookingtour = Bookingtour.search_by_user current_user.id
     end
   end

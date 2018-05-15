@@ -1,0 +1,66 @@
+<div class="home-slider">
+    <div class="slideshow" style="height:  500px;">
+        <div class="forcefullwidth_wrapper_tp_banner" style="text-align:  center; position: relative;">
+            <%= link_to image_tag("img1.jpg", alt: "home logo", :style => "height: 500px; width: 100%"), "#" %>
+        </div>
+        <div class="search-box-wrapper" style="margin-top: -200px;margin-left: 200px">
+            <div class="search-box container">
+            </div>
+        </div>
+    </div>
+    <%= render "search" %>
+</div>
+<div class="clear" style="margin:  200px;"></div>
+<section id="content" style="margin-top: -200px;">
+    <div class="entry-content">
+        <div class="container">
+            <div class="section destinations">
+                <h2 class="section-title"><%= t ".tour_highlight" %></h2>
+                <div class="line" style="border-bottom: solid red;width: 40px; margin-left: 48%;border-width: 0.5px; margin-bottom: 20px; "></div>
+                <div class="tour-packages row add-clearfix image-box listing-style2">
+                <%= render partial: "limit_tours", collection: tour_home %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div style="position: relative;">
+    <%= image_tag("vietnam.jpg", alt: "viet nam", :style => "height: 300px; width: 100%") %>
+        <div class="parallax global-map-area" data-stellar-background-ratio="0.5" style="position: absolute; top: 30px;">
+            <div class="wpb_column col-sm-4">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper">
+                        <div class="icon-box style4">
+                            <%= image_tag("pp.png", alt: "viet nam", :class => "soap-icon-adventure white-color") %>
+                                <h3 class="box-title"><%= t ".mkt1" %></h3>
+                                <p class="description">Lorem Ipsum simply dummy text industry&nbsp;lorem Ipsum simply dummy text industry.</p>
+                                <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wpb_column col-sm-4">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper">
+                        <div class="icon-box style4">
+                            <%= image_tag("pp.png", alt: "viet nam", :class => "soap-icon-adventure white-color") %>
+                                <h3 class="box-title"><%= t ".mkt2" %></h3>
+                                <p class="description">Lorem Ipsum simply dummy text industry. Lorem Ipsum simply dummy text industry.</p>
+                                <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wpb_column col-sm-4">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper">
+                        <div class="icon-box style4">
+                            <%= image_tag("pp.png", alt: "viet nam", :class => "soap-icon-adventure white-color") %>
+                                <h3 class="box-title"><%= t ".mkt3" %></h3>
+                                <p class="description">Lorem Ipsum simply dummy text industry.&nbsp;Lorem Ipsum simply dummy text industry.</p>
+                                <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

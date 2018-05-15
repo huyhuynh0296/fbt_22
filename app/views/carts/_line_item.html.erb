@@ -1,0 +1,34 @@
+<tr tour-id="<%=line_item.id%>">
+  <td>
+    <img src="<%=line_item.image%>" class= "image">
+  </td>
+  <td>
+     <%= link_to line_item.name,
+      tour_path(line_item) %>
+  </td>
+  <td>
+    <%= (session[:date][line_item.id.to_s]) %>
+  </td>
+  <td style="width: 20%;">
+    <div class="actions input-group btn-block input-quantity" >
+      <input value="<%= get_session_cart line_item.id %>"
+        size="1" class="form-control" type="number" >
+      <span class="input-group-btn">
+        <button class="btn btn-primary btn-update-quantity">
+          <i class="fa fa-refresh"></i>
+        </button>
+        <button class="btn btn-danger btn-delete-tour" >
+          <i class="fa fa-remove"></i>
+        </button>
+      </span>
+    </div>
+  </td>
+
+  <td>
+   <%= line_item.price.to_i %> <%= Settings.currency.usa %>
+  </td>
+  <td>
+    <%= total_price_of_item line_item %>
+    <%= Settings.currency.usa %>
+  </td>
+</tr>

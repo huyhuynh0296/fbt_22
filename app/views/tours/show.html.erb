@@ -1,0 +1,101 @@
+<% provide :title, @tour.name %>
+<div class="page-title-container">
+    <div class="container">
+        <div class="page-title pull-left">
+            <h2 class="entry-title">
+                            </h2>
+        </div>
+
+    </div>
+</div>
+<section id="content">
+   <div class="container tour-detail-page">
+   <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="#">Trang chủ</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Trang chủ</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Trang chủ</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Trang chủ</a></li>
+               </ul>
+      <div class="tour-intro-section">
+         <div class="row">
+            <div class="col-md-7">
+               <div class="image-box">
+                  <div class="flexslider photo-gallery style1" id="post-slideshow1" data-sync="#post-carousel1">
+                     <div class="flex-viewport" style="overflow: hidden; position: relative;"></div>
+                     <%= image_tag(@tour.image, alt: @tour.name, :style => "height: 100%; width: 100%") %>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-5 tour-info-right">
+               <div class="tour-info-right-content">
+                  <h1 class="tour-title"><%= @tour.name %></h1>
+                  <div class="info-frame">
+                     <div class="tour-price">
+                        <span itemprop="price"></span>
+                     </div>
+                        <div class="tour-item col-md-8" date-id="<%= @datetour.id %>" tour-id="<%= @tour.id %>">
+      <br>
+      <p><b><%= t ".category" %>:</b> <%= @tour.category.name %> </p>
+      <br>
+      <p class="book-price">
+        <%= t ".price" %>: <%= @tour.price %>
+          <%= Settings.currency.usa %>
+      </p>
+      <br>
+         <p>
+            <%= t ".datestart" %>: <%= @datetour.starttime %>
+            <%= link_to t ".date_other" %>
+         </p>
+
+      <br>
+      <%= button_tag t(".addcart"),
+        class: "btn btn-success btn-block btn-add-to-cart" %>
+      <br>
+    </div>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="tour-detail-section">
+         <div class="row" style="margin-top: 20px;">
+            <div id="main" class="col-sm-8 col-md-8" style="border: solid green 1px; border-radius: 3px;">
+               <div class="post-1824 tour type-tour status-publish has-post-thumbnail hentry location-da-nang tour_type-tour-trong-nuoc">
+                  <div id="tour-details" class="travelo-box" style="margin-top: 30px;">
+                     <div class="tab-container">
+                        <strong style="padding: 15px 15px;background-color: red;color: white;"><%= t ".detail" %>
+                        </strong>
+                        <div class="tab-content">
+                           <div id="tour-description" class="tab-pane fade in active">
+                              <%= @tour.description %>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-4 col-md-4">
+               <div class="amenity-widget widget" style="
+                  margin-left: 165px;
+                  ">
+                  <h3 class="widget-title"><%= t ".service" %></h3>
+                  <div class="widget-content">
+                     <ul>
+                        <div class="mg-bot10">
+                           <span style="margin-left: 10px"><%= t ".guide" %></span>
+                        </div>
+                        <div class="mg-bot10">
+                           <span style="margin-left: 10px"><%= t ".transport" %></span>
+                        </div>
+                        <div class="mg-bot10">
+                           <span style="margin-left: 10px"><%= t ".sticks" %></span>
+                        </div>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

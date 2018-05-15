@@ -1,0 +1,8 @@
+<div style="margin: 50px 0px;">
+<% flash.each do |key, value| %>
+  <% if key == "success" %>
+    <div class="alert alert-<%= key %>" id="succes"><%= value %></div>
+  <% else %>
+    <div class="alert alert-<%= key %>" id="error"><%= value %></div>
+  <% end %>
+<% end %>

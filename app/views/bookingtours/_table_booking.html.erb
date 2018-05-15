@@ -1,0 +1,36 @@
+<h3 class="text-center"><%= t ".title" %></h3>
+<p class="text-danger text-center fail"></p>
+<p class="text-success text-center success"></p>
+
+<table class="table table-striped">
+  <thead>
+    <% if is_user? %>
+      <tr>
+        <th class="text-center"><%= t ".name" %></th>
+        <th class="text-center"><%= t ".timestart" %></th>
+        <th class="text-center"><%= t ".people" %></th>
+        <th class="text-center"><%= t ".priceall" %></th>
+        <th class="text-center"><%= t ".status" %></th>
+        <th class="text-center"><%= t ".command" %></th>
+      </tr>
+    <% else %>
+    <div style="position:  relative;right:  -86%;margin:  20px 0px;font-size:  18px;">
+      <%= link_to "#{@tour_finished.size} tour finished", bookingtours_show_path(:count => @tour_finished.size), method: :get %>
+      <%= link_to "Delete", bookingtours_del_finished_path(:count_del => @tour_finished.size), method: :delete, data: { confirm: "Are you sure?" }, :style => "color: red;" %>
+    </div>
+
+      <tr>
+        <th class="text-center"><%= t ".username" %></th>
+        <th class="text-center"><%= t ".nametour" %></th>
+        <th class="text-center"><%= t ".people" %></th>
+        <th class="text-center"><%= t ".priceall" %></th>
+        <th class="text-center"><%= t ".timestart" %></th>
+        <th class="text-center"><%= t ".status" %></th>
+        <th class="text-center"><%= t ".command" %></th>
+      </tr>
+    <% end %>
+  </thead>
+  <tbody>
+      <%= render @bookingtour %>
+  </tbody>
+</table>

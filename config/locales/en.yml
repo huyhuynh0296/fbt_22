@@ -81,3 +81,13 @@ en:
         nbtour: "Number Tours"
         cm: "Command"
         category_fail: "Login Now!"
+  total_tour:
+    one: "Total booking tour (%{count})"
+    other: "Total bookings tour (%{count})"
+  carts:
+    show:
+      date: "Date tour"
+  tours:
+    show:
+      datestart: "Start"
+      date_other: "Other day"

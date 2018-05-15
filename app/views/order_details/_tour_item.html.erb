@@ -1,0 +1,9 @@
+<li class="list-group-item list-group-item-warning">
+  <%= tour_item.name.truncate Settings.order_details.tour_name %>
+  <span class="label label-info">
+    <%= get_session_cart tour_item.id %>
+  </span>
+  <span class="badge badge-primary badge-pill">
+    <%= total_price_of_item tour_item %> <%= Settings.currency.usa %>
+  </span>
+</li>

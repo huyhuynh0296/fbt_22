@@ -9,3 +9,7 @@ category:
   maximum_name: 30
 session:
   remember: "1"
+currency:
+  usa: $
+order_details:
+  tour_name: 30

@@ -1,5 +1,5 @@
 module ToursHelper
-  def status st
+  def status_book st
     if st == 0
       return "Waiting"
     elsif st == 1
@@ -9,5 +9,9 @@ module ToursHelper
     elsif st == 3
       return "Finshed"
     end
+  end
+
+  def tour_home
+    @tours = Tour.limit_tour 8
   end
 end

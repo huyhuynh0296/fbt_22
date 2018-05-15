@@ -17,7 +17,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.datetime :last_sign_in_at
       t.string   :current_sign_in_ip
       t.string   :last_sign_in_ip
-      t.integer :role, defaule: 0
+      t.integer :role, default: 0
       t.string :name, default: "no name"
       ## Confirmable
       # t.string   :confirmation_token

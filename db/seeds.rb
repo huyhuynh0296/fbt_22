@@ -12,8 +12,8 @@ User.create!(email: "admin@gmail.com",
 end
 
 users = User.first
-10.times do |n|
-  users.categories.create!(name: "Danh muc #{n+1}")
+20.times do |n|
+  users.categories.create!(name: "Danh muc #{n+1}", user_id: 1)
 end
 
 20.times do |n|
@@ -21,36 +21,36 @@ end
     value: n+1)
 end
 
+30.times do |n|
+  4.times do |m|
+    now = Time.now
+    oneday = 60*60*24
+    Datetour.create!(
+      starttime: (now + oneday * n).strftime("%Y/%m/%d"),
+      stoptime: (now + oneday + oneday * n).strftime("%Y/%m/%d"),
+      tour_id: n+1)
+  end
+end
+
+user = User.first
 20.times do |n|
-  now = Time.now
-  oneday = 60*60*24
-  Datetour.create!(starttime: (now + oneday*n).strftime("%Y/%m/%d"),
-    stoptime: (now+oneday+oneday*n).strftime("%Y/%m/%d"))
+  name_tour = Faker::Book.title
+  description = name_tour
+  price_tour = 10.4
+  user.tours.create!(
+  name: name_tour,
+  image: "img.jpg",
+  clock: "2,5 day",
+  description: description,
+  price: price_tour+n+0.1,
+  slot: 20+1,
+  image_id: n+1,
+  category_id: n+1)
 end
 # date.strftime('%A')
 #strftime("%Y/%m/%d")
 #fake tour
-users = User.take(6)
-10.times do |n|
-  users.each do |user|
-    name_tour = Faker::Book.title
-    description = name_tour
-    price_tour = Faker::Number.number(5)
-    user.tours.create!(
-    name: name_tour,
-    image: "img.jpg",
-    clock: "2,5 day",
-    description: description,
-    price: price_tour,
-    slot: 20+1,
-    place_id: n+1,
-    image_id: n+1,
-    category_id: n+1,
-    datetour_id: n+1)
-  end
-end
 
 10.times do |n|
-  Place.create!(name: Faker::Book.title,
-    user_id: 1)
+  Place.create!(name: Faker::Book.title)
 end

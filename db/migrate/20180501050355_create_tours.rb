@@ -4,11 +4,14 @@ class CreateTours < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :image
       t.text :description
-      t.integer :price
+      t.decimal :price, precision: 12, scale: 3
+      t.string :clock
+      t.integer :slot
+      t.boolean :active, default: true
       t.references :place
       t.references :image
       t.references :category
-      t.references :datetour
+      t.references :user
 
       t.timestamps
     end

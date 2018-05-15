@@ -1,0 +1,27 @@
+<tr id="book">
+<% if admin? current_user %>
+  <td class="text-center" id="name-<%= bookingtour.id %>"><%= bookingtour.user.name %></td>
+  <td class="text-center"><%= bookingtour.tour.name %></td>
+  <td class="text-center"><%= bookingtour.amount_persion %></td>
+  <td class="text-center"><%= price_booking bookingtour.price, bookingtour.amount_persion %></td>
+  <td class="text-center"><%= bookingtour.datetour_id %></td>
+  <td class="text-center"><%= status bookingtour.status %></td>
+  <td class="text-center">
+  <%= link_to "Cancel", { action: :destroy, id: bookingtour.id }, method: :delete, data: { confirm: "Are you sure?" } %>
+  </td>
+<% else %>
+  <td class="text-center" id="name-<%= bookingtour.id %>"><%= bookingtour.tour.name %></td>
+  <td class="text-center"><%= bookingtour.datetour.starttime %>
+  </td>
+  <td class="text-center"><%= bookingtour.amount_persion %></td>
+  <td class="text-center"><%= price_booking bookingtour.price, bookingtour.amount_persion %></td>
+   <td class="text-center"><%= status bookingtour.status %></td>
+  <td class="text-center">
+    <%= link_to "#", bookingtour, class: "glyphicon glyphicon-edit" %>
+    ||
+    <%= link_to "Destroy", bookingtour, method: :delete, data: { confirm: "Are you sure?" },
+          remote: true, class: "book_delete" %>
+  </td>
+
+<% end %>
+</tr>

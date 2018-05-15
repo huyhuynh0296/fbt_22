@@ -1,0 +1,67 @@
+<div class="modal-content" style="
+   margin:  6% 4% 0% 4%;
+   padding:  1% 3%;" >
+<div class="modal-header">
+   <h3 class="modal-title head_popup">ĐẶT TOUR NHANH<br>
+   </h3>
+</div>
+<div class="modal-body">
+<div class="wrap_pop">
+   <h1 class="tour-title"><%= @tour.name %></h1>
+   <div class="clear clearfix"></div>
+   <div class="info-frame">
+      <div class="row">
+         <div class="col-md-4">Mã tour</div>
+         <div class="col-md-8">
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-4">Khởi hành</div>
+         <div class="col-md-8">
+            <div class="row">
+               <div class="col-md-6">
+               </div>
+               <div class="col-md-6">
+                  <a style="color: #f99300" href="#">Other day</a>
+
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-4">Nơi khởi hành</div>
+         <div class="col-md-8"><%= @place.name %></div>
+      </div>
+      <div class="row">
+         <div class="col-md-4">Thời gian</div>
+         <div class="col-md-8"><%= @tour.clock %></div>
+      </div>
+      <div class="row">
+         <div class="col-md-4">Số chỗ còn nhận</div>
+         <div class="col-md-8"><%= @tour.slot %></div>
+      </div>
+   </div>
+   <div class="clear clearfix"></div>
+   <div class="info-frame" style=" text-align: center;">
+      <div class="tour-price">
+         <span itemprop="price"></span>
+         <%= form_for current_user.bookingtours.build, url: bookingtours_path(:tour_id => params[:tour_id]),:html => { :style => "width:  100%;margin-top:  10px;"} do |f| %>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.hidden_field :tour_id, value: params[:tour_id] %>
+      <%= f.hidden_field :status, value: 0 %>
+      <%= f.hidden_field :price, value: @tour.price %>
+      <%= collection_select :bookingtour, :datetour_id, @date, :id, :starttime,
+         {prompt: true}, {class: "form-control category-search",style: "width: 23%;margin-right: 77%;", id: "datetour", required: true} %>
+      <%= collection_select :bookingtour, :amount_persion, @peopletour, :id, :title,
+         {prompt: true}, {class: "form-control category-search",style: "width: 23%;margin-right: 77%;", id: "peopletour", required: true }%>
+         </br>
+            <%= f.submit "Booking", class: "btn btn-success" %>
+         <% end %>
+         <div class="clear clearfix"></div>
+         <br>
+         <div id="billing-pop-up-status"></div>
+      </div>
+   </div>
+</div>
+</div>
+</div>

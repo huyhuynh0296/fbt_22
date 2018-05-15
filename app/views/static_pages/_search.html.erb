@@ -1,0 +1,43 @@
+<div class="search-tab-content" style="
+    margin: -10% auto 0px 18%;
+    width: 70%;
+">
+         <div class="tab-pane fade active in" id="tours-tab">
+            <form role="search" method="get" id="searchform" class="tour-searchform" action="http://dev.gucafe.com/travel/">
+               <input type="hidden" name="post_type" value="tour">
+               <div class="row">
+                  <div class="form-group col-sm-6 col-md-2">
+                     <div class="">
+                        <select name="tour_types" id="tour_types_selector" class="full-width">
+                           <option value="">Tất cả</option>
+
+                        </select>
+                     </div>
+                  </div>
+                  <div class="form-group col-sm-4 col-md-2">
+                     <select id="place_to_selector" name="place_to" class="full-width">
+                        <option value="">Điểm đến</option>
+
+                     </select>
+                  </div>
+                  <div class="form-group col-sm-4 col-md-2">
+                     <select name="place_from" class="full-width">
+                        <option value="">Khởi hành từ</option>
+
+                     </select>
+                  </div>
+                  <div class="col-xs-6 col-sm-1 col-md-2">
+                     <div class="">
+                        <select name="max_price" class="full-width">
+                           <option value="">Giá</option>
+
+                        </select>
+                     </div>
+                  </div>
+                  <div class="form-group col-sm-6 col-md-2 col-xs-6">
+                     <button type="submit" class="full-width icon-check" data-animation-type="bounce" data-animation-duration="1">Tìm Tour</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>

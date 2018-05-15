@@ -7,6 +7,7 @@ class CreateBookingtours < ActiveRecord::Migration[5.1]
       t.integer :amount_persion
       t.integer :status, default: 0
       t.references :datetour
+      t.references :bill
 
       t.timestamps
     end

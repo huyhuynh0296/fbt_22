@@ -1,13 +1,21 @@
 module AbilityHelper
+  include CanCan::Ability
+
   def manage?
-    return true if current_user.role == 2
+    if user_signed_in?
+      return true if current_user.role == 2
+    end
   end
 
   def admin?
-    return true if current_user.role == 1
+    if user_signed_in?
+      return true if current_user.role == 1
+    end
   end
 
-  def users?
-    return true if current_user.role == 0
+  def is_user?
+    if user_signed_in?
+      return true if current_user.role == 0
+    end
   end
 end

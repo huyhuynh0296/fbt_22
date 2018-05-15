@@ -1,0 +1,43 @@
+<div class="page-title-container">
+   <div class="container">
+      <div class="page-title pull-left">
+         <h2 class="entry-title">
+            <%= t ".showtour" %><span></span>
+         </h2>
+      </div>
+   </div>
+</div>
+<section id="content">
+   <div class="container">
+      <div id="main">
+         <div class="row">
+            <div class="col-sm-4 col-md-3">
+               <div class="sidebar search-sidebar">
+                  <div class="toggle-container style1 filters-container">
+                     <div class="panel arrow-right">
+                        <h4 class="panel-title">
+                           <a data-toggle="collapse" href="#modify-search-panel" class=""><%= t ".search" %></a>
+                        </h4>
+                        <div id="modify-search-panel" class="panel-collapse collapse in">
+                           <div class="panel-content">
+                              <%= render "form" %>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-8 col-md-9">
+               <div class="tour-list list-wrapper">
+                  <div class="tour-packages listing-style3 image-box">
+                     <% if @tours.any? %>
+                        <%= render @tours %>
+                     <% end %>
+                     <%= will_paginate @tours %>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

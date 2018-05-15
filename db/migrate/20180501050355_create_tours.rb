@@ -8,6 +8,7 @@ class CreateTours < ActiveRecord::Migration[5.1]
       t.references :place
       t.references :image
       t.references :category
+      t.references :datetour
 
       t.timestamps
     end

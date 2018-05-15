@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root "static_pages#home"
   get "/gioithieu", to: "static_pages#gioithieu"
   get "/login", to: "sessions#new"
@@ -10,4 +11,5 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :categories, only: %i(index destroy update)
   end
+  resources :bookingtours, only: %i(index show create update destroy)
 end

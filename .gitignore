@@ -49,3 +49,16 @@ config/settings.local.yml
 config/settings/*.local.yml
 config/environments/*.local.yml
 test/fixtures/*.yml
+app/views/admin/untitled.html
+config/20180501042714_create_users.rb.example
+config/gem_devise.example
+config/user.rb.example
+db/migrate/20180512050644_add_devise_to_users.rb.example
+db/seeds.rb.example
+html
+config/environments/development.rb
+app/controllers/sessions_controller.rb.example
+app/controllers/tours_controller.rb
+app/controllers/users_controller.rb.example
+app/views/devise/
+app/assets/

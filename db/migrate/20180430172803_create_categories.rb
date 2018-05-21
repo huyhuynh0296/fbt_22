@@ -4,6 +4,7 @@ class CreateCategories < ActiveRecord::Migration[5.1]
       t.string :name
       t.text :description
       t.references :user
+      t.integer :parent, default: 0
 
       t.timestamps
     end

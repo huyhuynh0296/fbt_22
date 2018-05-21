@@ -2,7 +2,8 @@
   <td class="text-center" id="name-<%= category.id %>"><%= category.name %></td>
   <td class="text-center"><%= l category.updated_at.localtime, format: :long %></td>
   <td class="text-center"><%= "nameuser" %></td>
-  <td class="text-center"><%= "count tour" %></td>
+  <td class="text-center"><%= (Category.categories_include category.id).size %></td>
+  <td class="text-center"><%= category.tours.size %></td>
   <td class="text-center">
     <%= link_to "#", class: "modal-edit",
       data: {toggle: "modal", target: "#name", id: category.id} do %>

@@ -7,10 +7,19 @@
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
   </head>
   <body>
+  <% if admin? %>
+    <%= render "admin/left_bar"%>
+    <div class="main">
+      <%= render "admin/header"%>
+      <%= yield %>
+      <%= render "layouts/footer" %>
+    </div>
+  <% else %>
     <div class="page-wrapper">
       <%= render "layouts/header" %>
       <%= yield %>
       <%= render "layouts/footer" %>
+  <% end %>
     </div>
   </body>
 </html>

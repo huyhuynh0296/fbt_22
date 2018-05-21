@@ -1,24 +1,23 @@
 module Admin
   class CategoriesController < ApplicationController
     before_action :load_user, online: %i(index show)
-    before_action :find_category, only: %i(destroy)
+    before_action :find_category, only: %i(destroy update)
 
     def index
       @categories = Category.category_newest.paginate page: params[:page]
     end
 
     def destroy
-      unless @categorydel.blank?
-        unless @categorydel.destroy
-          flash[:danger] = "error!"
-          redirect_to admin_categories_url
-        else
-          flash[:succes] = "succes!"
-          redirect_to admin_categories_url
-        end
+      render json: {
+        status: delete_category_item(@category)
+      }
+    end
+
+    def update
+      if @category && @category.update_attributes(name: params[:name])
+        render json: {success: true, response_text: t(".success")}
       else
-        flash[:danfer] = "error!"
-        redirect_to admin_categories_url
+        render json: {success: false, response_text: t(".fail")}
       end
     end
 
@@ -27,18 +26,28 @@ module Admin
       render partial: "show_tour"
     end
 
-    private
+private
 
-    def find_category
-      unless params[:id].blank?
-        @categorydel = User.find_by id: params[:id]
+    def delete_category_item category
+      if @category && @category.tours.size.zero?
+        if check_category_parent(category.id)
+          return flash[:success]= "deleted successfully category #{category.name}!" if @category.destroy
+          # flash[:error] = "Can't delete category #{category.name} !"
+        else
+          flash[:error]= "category #{category.name} are containing subcategories !"
+        end
       else
-        flash[:danger] = "Not find category!"
-        redirect_to admin_categories_url
+        flash[:error]= "Can't delete category #{category.name} !"
       end
     end
 
-    def find_tour_in_category
+    def find_category
+      @category = Category.find_by id: params[:id]
+    end
+
+    def category_destroy category
+      return unless category.destroy
+      render json: {success: true, response_text: t(".success")}
     end
   end
 end

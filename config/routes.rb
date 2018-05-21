@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get "/bookingtours/update", to: "bookingtours#update"
   resources :users
   namespace :admin do
-    resources :categories, only: %i(index destroy)
+    resources :categories, only: %i(index destroy update)
     resources :users, only: %i(index destroy)
   end
   resources :tours, only: %i(index show)

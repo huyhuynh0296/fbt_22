@@ -78,9 +78,16 @@ en:
         nameC: "Name Category"
         time: "Time"
         own: "Own"
-        nbtour: "Number Tours"
+        nbcat: "Categories included"
+        nbtour: "Tours included"
         cm: "Command"
         category_fail: "Login Now!"
+      update:
+        fail: "Can't Not Update This Category"
+        success: "Update Is Success!"
+      destroy:
+        fail: "Can't Not Delete This Category"
+        success: "Delete Is Success!"
   total_tour:
     one: "Total booking tour (%{count})"
     other: "Total bookings tour (%{count})"

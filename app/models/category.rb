@@ -7,6 +7,7 @@ class Category < ApplicationRecord
     uniqueness: true
 
   scope :category_newest, ->{order updated_at: :desc}
+  scope :categories_include, ->(parent){where "parent = ?", parent}
 
   def downcase_name
     self.name = name.downcase

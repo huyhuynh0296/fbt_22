@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20180516160310) do
     t.string "name"
     t.text "description"
     t.bigint "user_id"
+    t.integer "parent", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_categories_on_user_id"

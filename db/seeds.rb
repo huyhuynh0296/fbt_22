@@ -4,6 +4,8 @@ User.create!(email: "admin@gmail.com",
              password_confirmation: "111111",
              role: 1)
 
+Category.create!(name: "delete", user_id: 1)
+
 19.times do |n|
   User.create!(email: "user#{n+1}@gmail.com",
       password: "111111",
@@ -13,7 +15,11 @@ end
 
 users = User.first
 20.times do |n|
-  users.categories.create!(name: "Danh muc #{n+1}", user_id: 1)
+  3.times do|m|
+    users.categories.create!(name: "Danh muc #{n+1}",
+      user_id: 1,
+      parent: n+1)
+  end
 end
 
 20.times do |n|

@@ -1,0 +1,7 @@
+<tr id="category-<%= category.id %>">
+  <td class="text-center" id="name-<%= category.id %>"><%= category.name %></td>
+  <td class="text-center"><%= l category.deleted_at.localtime, format: :long %></td>
+  <td class="text-center">
+    <%= link_to (image_tag "restore.png"), admin_categories_restore_path(:id => category.id), method: :patch %>
+  </td>
+</tr>

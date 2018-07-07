@@ -4,28 +4,49 @@
     <%= link_to (image_tag "admin.png", class: "media-object", style: "width:60px;"), "#" %>
     <%= link_to current_user.name, current_user  %>
   </div>
-  <div class="media">
-    <div class="media-left">
-      <%= link_to "Categories", admin_categories_path %>
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Categories</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <ul class="list-group">
+        <li class="list-group-item"><%= link_to "Show", admin_categories_path %></li>
+        <li class="list-group-item"><%= link_to "History", admin_categories_deleted_path %></li>
+      </ul>
+      <div class="panel-footer">Categories</div>
+      </div>
     </div>
-    <div class="media-body">
-      <%= link_to (image_tag "plus.png"), admin_categories_path %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Tours</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+         <ul class="list-group">
+        <li class="list-group-item"><%= link_to "Show", admin_tours_path %></li>
+        <li class="list-group-item"><%= link_to "Add", new_admin_tour_path %></li>
+        <li class="list-group-item">Deleted</li>
+      </ul>
+      <div class="panel-footer">Categories</div>
+      </div>
     </div>
-  </div>
-  <div class="media">
-    <div class="media-left">
-      <%= link_to "Tours", "#" %>
-    </div>
-    <div class="media-body">
-      <%= link_to (image_tag "plus.png"), admin_categories_path %>
-    </div>
-  </div>
-  <div class="media">
-    <div class="media-left">
-      <%= link_to "Bookingtours", "#" %>
-    </div>
-    <div class="media-body">
-
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Bookings</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+         <ul class="list-group">
+        <li class="list-group-item">Show</li>
+        <li class="list-group-item">Deleted</li>
+      </ul>
+      <div class="panel-footer">Categories</div>
+      </div>
     </div>
   </div>
 </div>

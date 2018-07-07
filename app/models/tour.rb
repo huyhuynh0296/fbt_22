@@ -10,6 +10,8 @@ class Tour < ApplicationRecord
   has_many :images, dependent: :destroy
   has_many :order_items, dependent: :destroy
 
+  mount_uploader :image, ImageUploader
+
   scope :tour_newest, ->{order created_at: :desc}
   scope :search_tour, ->(tour_id){where "id = ?", tour_id}
   scope :limit_tour, -> (limit) { order("created_at desc").limit(limit)}

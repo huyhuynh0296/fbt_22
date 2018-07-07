@@ -13,10 +13,10 @@ Category.create!(name: "delete", user_id: 1)
       name: "user#{n+1}")
 end
 
-users = User.first
+user = User.first
 20.times do |n|
   3.times do|m|
-    users.categories.create!(name: "Danh muc #{n+1}",
+    user.categories.create!(name: "Danh muc #{n+1}",
       user_id: 1,
       parent: n+1)
   end
@@ -51,12 +51,13 @@ user = User.first
   price: price_tour+n+0.1,
   slot: 20+1,
   image_id: n+1,
-  category_id: n+1)
+  category_id: n+1,
+  place_id: n+1)
 end
 # date.strftime('%A')
 #strftime("%Y/%m/%d")
 #fake tour
 
-10.times do |n|
+20.times do |n|
   Place.create!(name: Faker::Book.title)
 end

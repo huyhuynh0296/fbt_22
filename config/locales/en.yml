@@ -76,18 +76,38 @@ en:
       table_category:
         title: "Categories"
         nameC: "Name Category"
-        time: "Time"
-        own: "Own"
+        time: "Latest updates"
+        own: "Created by"
         nbcat: "Categories included"
         nbtour: "Tours included"
         cm: "Command"
         category_fail: "Login Now!"
+      table_category_deleted:
+        title: "Deleted categories"
+        time_del: "Timeline deleted"
+        own_del: "Deleted by"
+        cm: "Command"
       update:
         fail: "Can't Not Update This Category"
         success: "Update Is Success!"
       destroy:
         fail: "Can't Not Delete This Category"
         success: "Delete Is Success!"
+    tours:
+      new:
+        name: "Name tour"
+        mota: "Description"
+        price: "Price"
+      table_tour:
+        name: "Name"
+        image: "Image"
+        price: "Price"
+        place: "Country"
+        category: "Category"
+        slot: "quantity"
+        status: "Status"
+        booked: "Booked"
+        cm: "Command"
   total_tour:
     one: "Total booking tour (%{count})"
     other: "Total bookings tour (%{count})"

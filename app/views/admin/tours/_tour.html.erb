@@ -1,0 +1,14 @@
+<tr id="tour-<%= tour.id %>">
+  <td class="text-center" id="name-<%= tour.id %>"><%= tour.name %></td>
+  <td class="text-center"><%= image_tag tour.image_url.to_s %></td>
+  <td class="text-center"><%= tour.price %><%= Settings.currency.usa %></td>
+  <td class="text-center"><%= tour.place.name %></td>
+  <td class="text-center"><%= tour.category.name %></td>
+  <td class="text-center"><%= tour.slot %></td>
+  <td class="text-center"><%= tour.active %></td>
+  <td class="text-center"><%= tour.bookingtours.size %></td>
+  <td class="text-center">
+    <%= link_to "", edit_admin_tour_path(tour), metod: :get, class: "glyphicon glyphicon-edit"  %>
+    <%= link_to "", admin_tour_path(tour), metod: :delete,data: { confirm: "Are you sure?" }, class: "glyphicon glyphicon-trash"  %>
+  </td>
+</tr>

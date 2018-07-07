@@ -1,0 +1,43 @@
+<h3 class="text-center"><%= t ".title" %></h3>
+<p class="text-danger text-center fail"></p>
+<p class="text-success text-center success"></p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th class="text-center"><%= t ".nameC" %></th>
+      <th class="text-center"><%= t ".time_del" %></th>
+      <th class="text-center"><%= t ".cm" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @categorydeleted.any? %>
+      <%= render partial: "categorydeleted", collection: @categorydeleted, as: :category %>
+    <% end %>
+    <%= will_paginate @categorydeleted %>
+  </tbody>
+</table>
+
+<div class="modal fade" id="name" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <%= button_tag type: "button", class: "close", data: {dismiss: "modal"} do %>
+          &times;
+        <% end %>
+        <h4 class="modal-title"><%= t ".head" %></h4>
+      </div>
+
+      <div class="modal-body">
+        <%= text_area_tag "comment", nil, class: "form-control content" %>
+        <%= hidden_field_tag "category-id" %>
+      </div>
+
+      <div class="modal-footer">
+        <%= button_tag type: "button",
+          class: "btn btn-primary center-block btn-edit" do %>
+          <%= t ".update" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

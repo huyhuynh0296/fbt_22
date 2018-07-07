@@ -1,0 +1,24 @@
+<h3 class="text-center"><%= t ".title" %></h3>
+<p class="text-danger text-center fail"></p>
+<p class="text-success text-center success"></p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th class="text-center"><%= t ".name" %></th>
+      <th class="text-center"><%= t ".image" %></th>
+      <th class="text-center"><%= t ".price" %></th>
+      <th class="text-center"><%= t ".place" %></th>
+      <th class="text-center"><%= t ".category" %></th>
+      <th class="text-center"><%= t ".slot" %></th>
+      <th class="text-center"><%= t ".status" %></th>
+      <th class="text-center"><%= t ".booked" %></th>
+      <th class="text-center"><%= t ".cm" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @tours.any? %>
+      <%= render @tours %>
+    <% end %>
+    <%= will_paginate @tours %>
+  </tbody>
+</table>

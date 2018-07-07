@@ -1,15 +1,15 @@
 <tr id="category-<%= category.id %>">
-  <td class="text-center" id="name-<%= category.id %>"><%= category.name %></td>
+  <td id="name-<%= category.id %>"><%= category.name %></td>
   <td class="text-center"><%= l category.updated_at.localtime, format: :long %></td>
-  <td class="text-center"><%= "nameuser" %></td>
+  <td class="text-center"><%= current_user.name %></td>
   <td class="text-center"><%= (Category.categories_include category.id).size %></td>
   <td class="text-center"><%= category.tours.size %></td>
   <td class="text-center">
-    <%= link_to "#", class: "modal-edit",
+    <%= link_to "", class: "modal-edit",
       data: {toggle: "modal", target: "#name", id: category.id} do %>
       <span class="glyphicon glyphicon-edit"></span>
     <% end %>
-    <%= link_to "#", class: "btn-remove", data: {id: category.id} do %>
+    <%= link_to "", class: "btn-remove", data: {id: category.id} do %>
       <span class="glyphicon glyphicon-trash"></span>
     <% end %>
   </td>

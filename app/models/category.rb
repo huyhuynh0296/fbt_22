@@ -1,4 +1,5 @@
 class Category < ApplicationRecord
+  acts_as_paranoid
   has_many :tours, dependent: :destroy
 
   before_save :downcase_name
@@ -6,6 +7,7 @@ class Category < ApplicationRecord
     length: {maximum: Settings.category.maximum_name},
     uniqueness: true
 
+  scope :category_all,->(status){where "status = ?", (status)}
   scope :category_newest, ->{order updated_at: :desc}
   scope :categories_include, ->(parent){where "parent = ?", parent}
 
